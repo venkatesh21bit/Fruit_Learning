@@ -1,43 +1,15 @@
 {
+  "framework": "nextjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs",
+  "installCommand": "npm install",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "git": {
     "deploymentEnabled": {
       "main": true
     }
   },
-  "functions": {
-    "app/**/*.tsx": {
-      "runtime": "@vercel/next"
-    }
-  },
-  "routes": [
-    {
-      "src": "/videos",
-      "dest": "/videos"
-    },
-    {
-      "src": "/calories",
-      "dest": "/calories"
-    },
-    {
-      "src": "/feedback",
-      "dest": "/feedback"
-    },
-    {
-      "src": "/learn",
-      "dest": "/learn"
-    },
-    {
-      "src": "/quiz",
-      "dest": "/quiz"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -57,13 +29,23 @@
       ]
     },
     {
-      "source": "/public/(.*)",
+      "source": "/(.*\\.(mp4|webm|ogg|avi|mov))$",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Content-Type",
+          "value": "video/mp4"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/videos/(.*)",
+      "destination": "/videos"
     }
   ]
 }

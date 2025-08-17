@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
   
-  // Ensure proper trailing slash handling
-  trailingSlash: false,
-  
   // Handle video files in webpack
   webpack: (config: any) => {
     config.module.rules.push({
