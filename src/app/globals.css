@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
+/* Force light theme for autism-friendly design */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1f2937;
 }
 
 @theme inline {
@@ -12,15 +13,143 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Override dark mode for consistent, autism-friendly experience */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #1f2937;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* Ensure proper contrast for autism-friendly design */
+* {
+  box-sizing: border-box;
+}
+
+/* High contrast text for accessibility */
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2937 !important;
+  font-weight: 700;
+}
+
+p, span, div {
+  color: #374151 !important;
+}
+
+/* Ensure card backgrounds are always light with high contrast text */
+.bg-gray-50,
+.bg-blue-50,
+.bg-green-50,
+.bg-yellow-50,
+.bg-orange-50,
+.bg-purple-50,
+.bg-red-50 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ensure white backgrounds are truly white */
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+/* High contrast for specific color text classes */
+.text-gray-600,
+.text-gray-700,
+.text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.text-blue-600,
+.text-blue-700,
+.text-blue-800 {
+  color: #1e40af !important;
+}
+
+.text-green-600,
+.text-green-700,
+.text-green-800 {
+  color: #059669 !important;
+}
+
+.text-yellow-600,
+.text-yellow-700,
+.text-yellow-800 {
+  color: #d97706 !important;
+}
+
+.text-orange-600,
+.text-orange-700,
+.text-orange-800 {
+  color: #ea580c !important;
+}
+
+.text-purple-600,
+.text-purple-700,
+.text-purple-800 {
+  color: #7c3aed !important;
+}
+
+.text-red-600,
+.text-red-700,
+.text-red-800 {
+  color: #dc2626 !important;
+}
+
+/* Ensure proper contrast on colored backgrounds */
+.bg-blue-100 .text-blue-800,
+.bg-green-100 .text-green-800,
+.bg-yellow-100 .text-yellow-800,
+.bg-orange-100 .text-orange-800,
+.bg-purple-100 .text-purple-800,
+.bg-red-100 .text-red-800 {
+  font-weight: 600;
+}
+
+/* Navigation specific fixes */
+nav {
+  background: #ffffff !important;
+  border-bottom: 4px solid #3b82f6 !important;
+}
+
+/* Ensure input fields have proper contrast */
+input, textarea, select {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #3b82f6 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Ensure gradient backgrounds maintain readability */
+.bg-gradient-to-br,
+.bg-gradient-to-r {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%) !important;
+}
+
+/* Force light theme for all interactive elements */
+button, a {
+  color: inherit !important;
+}
+
+/* Override any dark mode styles that might interfere */
+@media (prefers-color-scheme: dark) {
+  * {
+    color-scheme: light !important;
+  }
+  
+  body {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+  }
 }
