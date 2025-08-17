@@ -8,6 +8,7 @@ An interactive, autism-friendly educational web application designed specificall
 - **Interactive Fruit Cards**: Visual cards displaying fruit information with emojis, descriptions, and nutritional data
 - **🆕 Interactive Calorie Learning**: New autism-friendly calorie education with visual energy displays, interactive games, and simple comparisons
 - **🆕 Calorie Learning Games**: Structured learning activities with different difficulty levels designed for children with autism
+- **🆕 Educational Videos**: Collection of fun learning videos about fruits, nutrition, and healthy eating with songs and stories
 - **Enhanced Calorie Guessing Game**: Improved quiz with visual energy helpers and better feedback
 - **Progress Tracking**: Local storage-based system to track learning progress and accuracy
 - **Comprehensive Fruit Database**: 8 different fruits with detailed nutritional information
@@ -18,6 +19,17 @@ An interactive, autism-friendly educational web application designed specificall
 - **Energy Comparisons**: Visual bar charts and activity comparisons (e.g., "5 minutes of walking")
 - **Structured Learning Games**: Multi-level games with clear explanations and immediate feedback
 - **Simple Language**: Child-friendly explanations like "energy for your body" instead of complex terms
+
+### 🆕 NEW: Educational Video Library
+- **5 Educational Videos**: Carefully curated content about fruits and nutrition
+  - "Fruits Song - Healthy Eating + More Learning Videos for Kids"
+  - "Healthy Eating for Kids - Learn About Carbohydrates, Fats, Proteins, Vitamins and Mineral Salts"
+  - "Kids Learning CALORIES Song"
+  - "Learning Fruits - Fun Way to Build Your Child's Vocabulary"
+  - "Ten Little Fruits Jumping on the Bed - Fruits Song - Learn Fruits - Nursery Rhymes"
+- **Category Filtering**: Videos organized by Fruits, Nutrition, and Songs
+- **Accessible Player**: Custom video controls designed for children
+- **Git LFS Integration**: Large video files properly managed with Git Large File Storage
 
 ### Autism-Friendly Design
 - **Clear Visual Hierarchy**: Simple, consistent layouts with high contrast
@@ -44,6 +56,8 @@ An interactive, autism-friendly educational web application designed specificall
 - **Animations**: Framer Motion for smooth interactions
 - **Icons**: Lucide React for consistent iconography
 - **State Management**: React hooks with local storage persistence
+- **Video Storage**: Git LFS for large video file management
+- **Media Handling**: HTML5 video with custom controls and error handling
 
 ## 📱 Pages and Components
 
@@ -55,14 +69,20 @@ An interactive, autism-friendly educational web application designed specificall
    - **Game Mode**: Structured learning games with multiple difficulty levels
    - **Comparison Mode**: Visual energy level comparisons and sorting
    - **Educational Content**: What are calories and why they matter
-4. **Quiz** (`/quiz`) - Enhanced calorie guessing game with energy helpers and visual feedback
-5. **Feedback** (`/feedback`) - Form for user feedback and ratings
+4. **🆕 Videos** (`/videos`) - Educational video library with categories:
+   - **Fruits Videos**: Songs and stories about different fruits
+   - **Nutrition Videos**: Learning about healthy eating and nutrients
+   - **Songs & Rhymes**: Musical content for engaging learning
+   - **Interactive Player**: Child-friendly video controls with category filtering
+5. **Quiz** (`/quiz`) - Enhanced calorie guessing game with energy helpers and visual feedback
+6. **Feedback** (`/feedback`) - Form for user feedback and ratings
 
 ### Key Components
-- **Navigation** - Enhanced navigation bar with calorie learning link
+- **Navigation** - Enhanced navigation bar with calorie learning and videos links
 - **FruitCard** - Reusable component for displaying fruit information
 - **🆕 InteractiveCalorieCard** - New autism-friendly calorie display with interactive features
 - **🆕 CalorieLearningGame** - Structured educational game component with multiple question types
+- **🆕 VideoPlayer** - Child-friendly video player with error handling and custom controls
 - **Quiz** - Enhanced interactive quiz component with visual energy helpers
 - **FeedbackForm** - Comprehensive feedback form with validation
 - **UI Components** - Button, Input, Card components with consistent styling
